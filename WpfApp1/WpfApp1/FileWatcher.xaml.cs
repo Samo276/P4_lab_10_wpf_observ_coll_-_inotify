@@ -31,7 +31,7 @@ namespace WpfApp1
             _watcher.NotifyFilter = NotifyFilters.LastWrite;
             _watcher.Changed += _watcher_Changed; //<<<<<tu pojawia się blad którego nie umiem rozwiazac
         }
-        private void _watcher_Changed(object sender, FileSystemWatcher e)
+        private void _watcher_Changed(object sender, FileSystemEventArgs e)
         {
             LoadFile();
         }
